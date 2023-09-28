@@ -3,11 +3,12 @@ import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ErrorOverlay from "../components/ErrorOverlay";
-import { RootState, useAppDispatch, useAppSelector } from "../store";
-import { removeLoading, setLoading } from "../store/loading.reducer";
 import LoadingOverlay from "../components/LoadingOverlay";
 import { RootStackParams } from "./config";
-import Home from "../screens/Home";
+import Lesson from "../screens/Lesson";
+import Quizz from "../screens/Quizz";
+import GameScreen from "../screens/GameScreen";
+import TabNav from "./TabNav";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
@@ -21,8 +22,12 @@ const Root = () => {
           screenOptions={{
             headerShown: false,
           }}
+          initialRouteName="TabNav"
         >
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="TabNav" component={TabNav} />
+          <Stack.Screen name="Lesson" component={Lesson} />
+          <Stack.Screen name="Quiz" component={Quizz} />
+          <Stack.Screen name="Game" component={GameScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

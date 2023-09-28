@@ -8,7 +8,7 @@ export const newColorTheme = {
   primary: {
     Darker: "#311902",
     Dark: "#984D07",
-    Main: "#F58216",
+    Main: "#FFFFFF",
     Lighter: "#FDE5CE",
   },
   secondary: {
@@ -28,6 +28,10 @@ export const newColorTheme = {
     700: "#4D4D4D",
     800: "#333333",
     900: "#1A1A1A",
+  },
+  gradient: {
+    color1: "#66DCFB",
+    color2: "#2A63F6",
   },
 };
 
