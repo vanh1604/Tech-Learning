@@ -1,3 +1,4 @@
+import { answerReducer } from "./answer.reducer";
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import type { TypedUseSelectorHook } from "react-redux";
@@ -5,10 +6,11 @@ import { errorReducer } from "./error.reducer";
 import { loadingReducer } from "./loading.reducer";
 
 const store = configureStore({
-  reducer: {
-    error: errorReducer,
-    loading: loadingReducer,
-  },
+	reducer: {
+		error: errorReducer,
+		loading: loadingReducer,
+		answer: answerReducer,
+	},
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -13,12 +13,10 @@ import Header1 from "../../components/Header1";
 import BackBtn from "../../components/BackBtn";
 import NotificationBox from "../../components/NotificationBox";
 
-const Quizz = () => {
+const AnswerQuizz = () => {
 	const navigation = useNavigation<any>();
-	const route = useRoute<any>();
 	const questions = quizzes;
-	const [order, setOrder] = useState(route.params.order || 1);
-	// console.log(route.params.order);
+	const [order, setOrder] = useState(1);
 	const [showModal, setShowModal] = useState(false);
 	const minOrder = 1;
 	const maxOrder = questions.length;
@@ -43,7 +41,7 @@ const Quizz = () => {
 	};
 	const [countdown, setCountdown] = useState(180); // Initial countdown time in seconds
 	const currentQuestion = questions[order - 1];
-	const ansOptions = currentQuestion.ans.map((item, index) => {
+	const ansOptions = currentQuestion.ans.map((item) => {
 		return {
 			...item,
 		};
@@ -134,6 +132,6 @@ const Quizz = () => {
 	);
 };
 
-export default Quizz;
+export default AnswerQuizz;
 
 const styles = StyleSheet.create({});

@@ -4,6 +4,7 @@ import { Box, Row } from "native-base";
 import { Text } from "native-base";
 import { colors } from "../../constansts/style";
 import { color } from "native-base/lib/typescript/theme/styled-system";
+import BackgroundLayout from "../BackgroundLayout";
 
 export interface QuizzItemProps extends TouchableOpacityProps {
 	title: string;
@@ -13,29 +14,47 @@ export interface QuizzItemProps extends TouchableOpacityProps {
 	order?: number;
 }
 
+const Answer = ({ textColor, answer, title }: any) => {
+	return (
+		<Row>
+			<Text
+				bold
+				mr={2}
+				color={textColor}
+			>
+				{answer}.{" "}
+			</Text>
+			<Text color={textColor}>{title}</Text>
+		</Row>
+	);
+};
+
 const QuizzItem = (props: QuizzItemProps) => {
 	const textColor = props.isUserChoice ? "#fff" : "#000";
 	return (
 		<TouchableOpacity
 			style={[
-				styles.answerBox,
 				{
 					marginBottom: 16,
-					backgroundColor: props.isUserChoice ? colors.primary : "#fff",
 				},
 			]}
 			{...props}
 		>
-			<Row>
-				<Text
-					bold
-					mr={2}
-					color={textColor}
-				>
-					{props.answer}.{" "}
-				</Text>
-				<Text color={textColor}>{props.title}</Text>
-			</Row>
+			{props.isUserChoice ? (
+				<BackgroundLayout style={[styles.answerBox]}>
+					<Answer
+						{...props}
+						textColor={textColor}
+					/>
+				</BackgroundLayout>
+			) : (
+				<Box style={styles.answerBox}>
+					<Answer
+						{...props}
+						textColor={textColor}
+					/>
+				</Box>
+			)}
 		</TouchableOpacity>
 	);
 };

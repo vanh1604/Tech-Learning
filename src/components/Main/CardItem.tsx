@@ -3,13 +3,15 @@ import React from "react";
 import { Image, Row } from "native-base";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { BlurView } from "@react-native-community/blur";
+import { ArrowCircleRight2 } from "iconsax-react-native";
 
 export interface CardProps extends TouchableOpacityProps {
 	title: string;
 	isQuizz?: boolean;
 	avata?: any;
 	isComplete?: boolean;
-	navigateTo: string;
+	navigateTo?: string;
 	paramList?: any;
 }
 
@@ -31,9 +33,8 @@ const MainItem = (props: CardProps) => {
 					alt="avata"
 				/>
 				<Text style={styles.cardTitle}>{props.title}</Text>
-				<AntDesign
-					name="arrowright"
-					size={24}
+				<ArrowCircleRight2
+					size="24"
 					color="#fff"
 				/>
 			</Row>
@@ -56,12 +57,11 @@ const QuizzCard = (props: CardProps) => {
 					<AntDesign
 						name="checkcircle"
 						size={24}
-						color="black"
+						color="#16A34A"
 					/>
 				)}
-				<AntDesign
-					name="arrowright"
-					size={24}
+				<ArrowCircleRight2
+					size="24"
 					color="#fff"
 				/>
 			</Row>
@@ -74,7 +74,7 @@ const CardItem = (props: CardProps) => {
 	return props.isQuizz ? (
 		<QuizzCard
 			{...props}
-			onPress={() => navigation.navigate(props.navigateTo, props.paramList)}
+			onPress={() => navigation.navigate("AnswerQuizz", props.paramList)}
 		/>
 	) : (
 		<MainItem
@@ -92,7 +92,9 @@ const styles = StyleSheet.create({
 		marginBottom: 16,
 		borderRadius: 16,
 		width: "100%",
-		backgroundColor: "rgba(255, 255, 255, 0.12);",
+		backgroundColor: "rgba(255, 255, 255,0.36)",
+		borderWidth: 1,
+		borderColor: "rgba(255, 255, 255,0.12)",
 	},
 	cardTitle: {
 		width: "60%",
@@ -100,5 +102,8 @@ const styles = StyleSheet.create({
 		fontWeight: "500",
 		lineHeight: 24,
 		fontSize: 16,
+		textShadowColor: "rgba(0, 0, 0, 0.50)", // Màu shadow
+		textShadowOffset: { width: 1, height: 1 }, // Độ dài và chiều cao của shadow
+		textShadowRadius: 2, // Bán kính của shadow
 	},
 });

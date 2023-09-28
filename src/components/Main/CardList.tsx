@@ -1,11 +1,25 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { FlatList } from "native-base";
+import CardItem, { CardProps } from "./CardItem";
 
-const CardList = () => {
+export interface CardListProps {
+	data: CardProps[];
+	isQuizz?: boolean;
+}
+
+const CardList = (props: CardListProps) => {
 	return (
-		<View>
-			<Text>CardList</Text>
-		</View>
+		<FlatList
+			data={props.data}
+			renderItem={({ item }) => (
+				<CardItem
+					{...item}
+					{...props}
+				/>
+			)}
+			keyExtractor={(item, index) => index.toString()}
+		/>
 	);
 };
 

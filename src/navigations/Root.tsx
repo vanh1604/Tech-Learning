@@ -9,29 +9,42 @@ import Lesson from "../screens/Lesson";
 import Quizz from "../screens/Quizz";
 import GameScreen from "../screens/GameScreen";
 import TabNav from "./TabNav";
+import AnswerQuizz from "../screens/Quizz/AnswerQuizz";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
 const Root = () => {
-  return (
-    <>
-      <LoadingOverlay />
-      <ErrorOverlay />
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}
-          initialRouteName="TabNav"
-        >
-          <Stack.Screen name="TabNav" component={TabNav} />
-          <Stack.Screen name="Lesson" component={Lesson} />
-          <Stack.Screen name="Quiz" component={Quizz} />
-          <Stack.Screen name="Game" component={GameScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </>
-  );
+	return (
+		<>
+			<LoadingOverlay />
+			<ErrorOverlay />
+			<NavigationContainer>
+				<Stack.Navigator
+					screenOptions={{
+						headerShown: false,
+					}}
+					initialRouteName="TabNav"
+				>
+					<Stack.Screen
+						name="TabNav"
+						component={TabNav}
+					/>
+					<Stack.Screen
+						name="Lesson"
+						component={Lesson}
+					/>
+					<Stack.Screen
+						name="AnswerQuizz"
+						component={AnswerQuizz}
+					/>
+					<Stack.Screen
+						name="Game"
+						component={GameScreen}
+					/>
+				</Stack.Navigator>
+			</NavigationContainer>
+		</>
+	);
 };
 
 export default Root;

@@ -3,6 +3,8 @@ import React from "react";
 import { FooterType } from "./FooterLeft";
 import { AntDesign } from "@expo/vector-icons";
 import { STYLES } from "../../../constansts/style";
+import BackgroundLayout from "../../BackgroundLayout";
+import { Box } from "native-base";
 
 const FooterRight = ({ isArrow, ...props }: FooterType) => {
 	const textColor = "#fff";
@@ -10,7 +12,6 @@ const FooterRight = ({ isArrow, ...props }: FooterType) => {
 		<TouchableOpacity
 			{...props}
 			style={[
-				STYLES.primaryButton,
 				{
 					paddingVertical: 10,
 					paddingHorizontal: 12,
@@ -21,15 +22,17 @@ const FooterRight = ({ isArrow, ...props }: FooterType) => {
 				},
 			]}
 		>
-			{isArrow ? (
-				<AntDesign
-					name="arrowright"
-					size={24}
-					color={textColor}
-				/>
-			) : (
-				<Text style={{ color: textColor }}>{props.endProgressTitle}</Text>
-			)}
+			<BackgroundLayout style={{ height: 48, borderRadius: 99999, justifyContent: "center", alignItems: "center", paddingVertical: 10, paddingHorizontal: 12 }}>
+				{isArrow ? (
+					<AntDesign
+						name="arrowright"
+						size={24}
+						color={textColor}
+					/>
+				) : (
+					<Text style={{ color: textColor }}>{props.endProgressTitle}</Text>
+				)}
+			</BackgroundLayout>
 		</TouchableOpacity>
 	);
 };

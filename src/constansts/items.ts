@@ -1,6 +1,9 @@
-const emptyArray = new Array(10).fill({ title: "", ans: [], order: 0 });
+import { CardProps } from "../components/Main/CardItem";
+import { CardListProps } from "../components/Main/CardList";
 
-export const quizzes = emptyArray.map((item: any, index: any) => {
+const quizEmptyArray = new Array(10).fill({ title: "", ans: [], order: 0 });
+
+export const quizzes = quizEmptyArray.map((item: any, index: any) => {
 	return {
 		title: "Lorem ipsum dolor sit amet consectetur. Penatibus nunc quam nulla dignissim libero massa feugiat.",
 		ans: [
@@ -24,5 +27,46 @@ export const quizzes = emptyArray.map((item: any, index: any) => {
 		order: index + 1,
 		rightAns: "B",
 		userAns: "",
+	};
+});
+
+const lessonsEmptyArray: CardProps[] = new Array(10).fill({
+	navigateTo: "Lesson",
+	title: "Lorem ipsum",
+	id: 0,
+	avata: {
+		uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",
+	},
+});
+
+export const lessons: CardProps[] = lessonsEmptyArray.map((lesson, index) => {
+	return {
+		...lesson,
+		id: `lesson${index}`,
+		paramList: {
+			id: `lesson${index}`,
+		},
+	};
+});
+
+const quizEmtyArray: CardProps[] = new Array(10).fill({
+	navigateTo: "Lesson",
+	title: "Lorem ipsum",
+	id: 0,
+	avata: {
+		uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",
+	},
+});
+
+export const quizz = quizEmtyArray.map((quiz, index) => {
+	return {
+		...quiz,
+		navigateTo: "Quiz",
+		id: `quiz${index}`,
+		paramList: {
+			id: `quiz${index}`,
+			order: index + 1,
+		},
+		isComplete: index != 5,
 	};
 });

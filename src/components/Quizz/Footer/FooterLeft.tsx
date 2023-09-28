@@ -3,6 +3,7 @@ import React from "react";
 import { Box, IconButton } from "native-base";
 import { AntDesign } from "@expo/vector-icons";
 import { STYLES } from "../../../constansts/style";
+import BackgroundLayout from "../../BackgroundLayout";
 
 export interface FooterType extends TouchableOpacityProps {
 	isArrow?: boolean;
@@ -14,7 +15,6 @@ const FooterLeft = ({ isArrow, ...props }: FooterType) => {
 		<TouchableOpacity
 			{...props}
 			style={[
-				STYLES.primaryButton,
 				{
 					paddingVertical: isArrow ? 10 : 0,
 					paddingHorizontal: isArrow ? 12 : 0,
@@ -26,11 +26,13 @@ const FooterLeft = ({ isArrow, ...props }: FooterType) => {
 			]}
 		>
 			{isArrow && (
-				<AntDesign
-					name="arrowleft"
-					size={24}
-					color="#fff"
-				/>
+				<BackgroundLayout style={{ width: 48, height: 48, borderRadius: 99999, justifyContent: "center", alignItems: "center" }}>
+					<AntDesign
+						name="arrowleft"
+						size={24}
+						color="#fff"
+					/>
+				</BackgroundLayout>
 			)}
 		</TouchableOpacity>
 	);
