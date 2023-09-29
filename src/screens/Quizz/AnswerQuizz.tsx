@@ -2,7 +2,6 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Box, Column, Icon, IconButton, Progress, Row, Text } from "native-base";
-import { AntDesign } from "@expo/vector-icons";
 
 import { quizzes } from "../../constansts/items";
 import { STYLES, colors } from "../../constansts/style";
@@ -12,16 +11,19 @@ import Footer from "../../components/Quizz/Footer/Footer";
 import Header1 from "../../components/Header1";
 import BackBtn from "../../components/BackBtn";
 import NotificationBox from "../../components/NotificationBox";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
+import ComponentHeader from "../../components/Header/ComponentHeader";
 
 const AnswerQuizz = () => {
 	const navigation = useNavigation<any>();
-	const questions = quizzes;
+	const questions: any = useSelector<RootState>((state) => state.answer);
 	const [order, setOrder] = useState(1);
 	const [showModal, setShowModal] = useState(false);
 	const minOrder = 1;
 	const maxOrder = questions.length;
 	const onEndQuiz = () => {
-		navigation.replace("Answer");
+		toggleNoti();
 	};
 	const onOrderChange = (order: number) => {
 		let newOrder = order;
@@ -41,7 +43,7 @@ const AnswerQuizz = () => {
 	};
 	const [countdown, setCountdown] = useState(180); // Initial countdown time in seconds
 	const currentQuestion = questions[order - 1];
-	const ansOptions = currentQuestion.ans.map((item) => {
+	const ansOptions = currentQuestion.ans.map((item: any) => {
 		return {
 			...item,
 		};
@@ -55,7 +57,6 @@ const AnswerQuizz = () => {
 				setCountdown(countdown - 1);
 			}
 		}, 1000); // Cập nhật mỗi 1 giây
-
 		return () => {
 			clearInterval(intervalId); // Hủy bỏ interval khi component bị hủy
 		};
@@ -68,24 +69,22 @@ const AnswerQuizz = () => {
 		const secondFormatted = formatted(second);
 		return `${minuteFormatted}:${secondFormatted}`;
 	};
+	const countUserRightAns = () => {
+		let dem = 0;
+		questions.forEach((question: (typeof questions)[0]) => {
+			if (question.rightAns === question.userAns) dem++;
+		});
+		return dem;
+	};
+	const title = `Bạn đã trả lời đúng\n${countUserRightAns()}/${questions.length} câu`;
 	return (
 		<Column
 			bgColor={"white"}
 			flex={1}
 			width={"100%"}
 		>
-			<Header1
-				title="Câu hỏi"
-				LeftBtn={() => (
-					<TouchableOpacity onPress={toggleNoti}>
-						<AntDesign
-							name="left"
-							size={24}
-							color="white"
-						/>
-					</TouchableOpacity>
-				)}
-			/>
+			<ComponentHeader title="Giải đố" />
+
 			<Box px={6}>
 				<Box
 					flexDirection={"row"}
@@ -122,8 +121,7 @@ const AnswerQuizz = () => {
 				/>
 			</Box>
 			<NotificationBox
-				title="Bạn có muốn hủy trắc nghiệm?"
-				hasCancelButton
+				title={title}
 				showModal={showModal}
 				onConfirmHandler={navigation.goBack}
 				onCancelHandler={toggleNoti}

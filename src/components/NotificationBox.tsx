@@ -2,6 +2,7 @@ import { StyleSheet, Touchable, TouchableOpacity } from "react-native";
 import React from "react";
 import { Center, Pressable, Stack, Text } from "native-base";
 import { colors } from "../constansts/style";
+import BackgroundLayout from "./BackgroundLayout";
 
 export interface NotificationBoxProps {
 	title: string;
@@ -31,14 +32,14 @@ const NotificationBox = (props: NotificationBoxProps) => {
 				bgColor={"#fff"}
 				w={"70%"}
 				borderRadius={16}
-				pt={4}
+				py={4}
 			>
 				<Text
 					fontSize={16}
 					color={colors.primary}
 					bold
 				>
-					Thông báo
+					Xin chúc mừng
 				</Text>
 				<Text
 					w={200}
@@ -49,26 +50,26 @@ const NotificationBox = (props: NotificationBoxProps) => {
 				>
 					{props.title}
 				</Text>
-				<TouchableOpacity
+				<BackgroundLayout
 					style={{
-						borderTopWidth: 1,
-						borderTopColor: colors.lightGrey,
-						width: "100%",
+						width: "80%",
 						paddingHorizontal: 12,
-						paddingVertical: 10,
+						paddingVertical: 8,
+						borderRadius: 8,
 					}}
-					onPress={props.onConfirmHandler}
 				>
-					<Center>
-						<Text
-							fontSize={16}
-							color={colors.primary}
-							fontWeight={"500"}
-						>
-							Đồng ý
-						</Text>
-					</Center>
-				</TouchableOpacity>
+					<TouchableOpacity onPress={props.onConfirmHandler}>
+						<Center>
+							<Text
+								fontSize={16}
+								color={"#fff"}
+								fontWeight={"500"}
+							>
+								Đồng ý
+							</Text>
+						</Center>
+					</TouchableOpacity>
+				</BackgroundLayout>
 				{props.hasCancelButton && (
 					<Pressable
 						borderTopWidth={1}
