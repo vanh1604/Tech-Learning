@@ -70,3 +70,23 @@ export const quizz = quizEmtyArray.map((quiz, index) => {
 		isComplete: index != 5,
 	};
 });
+
+const gamesEmtyArray: CardProps[] = new Array(10).fill({
+	navigateTo: "puzzle",
+	title: "Lorem ipsum",
+	id: 0,
+	avata: {
+		uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",
+	},
+});
+
+export const games = gamesEmtyArray.map((game, index) => {
+	return {
+		...game,
+		id: `game${index}`,
+		paramList: {
+			id: `game${index}`,
+		},
+		title: "Lorem ipsum",
+	};
+});
