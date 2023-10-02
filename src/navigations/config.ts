@@ -7,7 +7,7 @@ export type BottomTabsParams = {
 
 export type RootStackParams = {
 	TabNav?: undefined;
-	Lesson: undefined;
+	LessonVIdeo: undefined;
 	Game: undefined;
 	Quiz: undefined;
 	AnswerQuizz: undefined;

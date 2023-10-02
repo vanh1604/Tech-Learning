@@ -10,6 +10,7 @@ import Quizz from "../screens/Quizz";
 import GameScreen from "../screens/GameScreen";
 import TabNav from "./TabNav";
 import AnswerQuizz from "../screens/Quizz/AnswerQuizz";
+import LessonVideo from "../screens/LessonVideo";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
@@ -30,8 +31,8 @@ const Root = () => {
 						component={TabNav}
 					/>
 					<Stack.Screen
-						name="Lesson"
-						component={Lesson}
+						name="LessonVIdeo"
+						component={LessonVideo}
 					/>
 					<Stack.Screen
 						name="AnswerQuizz"
