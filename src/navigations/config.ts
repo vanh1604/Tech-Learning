@@ -1,14 +1,15 @@
 import { NavigatorScreenParams } from "@react-navigation/native";
 export type BottomTabsParams = {
-	Lesson: undefined;
-	Game: undefined;
-	Quiz: undefined;
+  Lesson: undefined;
+  Game: undefined;
+  Quiz: undefined;
 };
 
 export type RootStackParams = {
-	TabNav?: undefined;
-	Lesson: undefined;
-	Game: undefined;
-	Quiz: undefined;
-	AnswerQuizz: undefined;
+  TabNav?: undefined;
+  Lesson: undefined;
+  Game: undefined;
+  Quiz: undefined;
+  AnswerQuizz: undefined;
+  Puzzle: undefined;
 };

@@ -11,7 +11,9 @@ const GameScreen = () => {
 		<Column flex={1}>
 			<MainBackground>
 				<HomeHeader title="Trò chơi" />
+				<Column mx={6}> 
 				<CardList data={games} />
+				</Column>
 			</MainBackground>
 		</Column>
 	);
