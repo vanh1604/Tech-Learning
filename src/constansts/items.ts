@@ -32,7 +32,7 @@ export const quizzes = quizEmptyArray.map((item: any, index: any) => {
 });
 
 const lessonsEmptyArray: CardProps[] = new Array(10).fill({
-  navigateTo: "Lesson",
+  navigateTo: "LessonVideo",
   title: "Lorem ipsum",
   id: 0,
   avata: {
@@ -46,6 +46,7 @@ export const lessons: CardProps[] = lessonsEmptyArray.map((lesson, index) => {
     id: `lesson${index}`,
     paramList: {
       id: `lesson${index}`,
+      videoSource: { uri: "https://pic.pikbest.com/19/58/54/88f888piCm76.mp4" },
     },
   };
 });

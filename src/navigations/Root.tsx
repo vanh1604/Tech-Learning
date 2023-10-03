@@ -11,6 +11,7 @@ import GameScreen from "../screens/GameScreen";
 import TabNav from "./TabNav";
 import AnswerQuizz from "../screens/Quizz/AnswerQuizz";
 import Puzzle from "../screens/Puzzle";
+import LessonVideo from "../screens/LessonVideo";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
@@ -18,7 +19,6 @@ const Root = () => {
   return (
     <>
       <LoadingOverlay />
-      <ErrorOverlay />
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -27,16 +27,13 @@ const Root = () => {
           initialRouteName="TabNav"
         >
           <Stack.Screen name="TabNav" component={TabNav} />
-          <Stack.Screen name="Lesson" component={Lesson} />
           <Stack.Screen name="AnswerQuizz" component={AnswerQuizz} />
           <Stack.Screen name="Game" component={GameScreen} />
           <Stack.Screen name="Puzzle" component={Puzzle} />
+          <Stack.Screen name="LessonVideo" component={LessonVideo} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 };
-
 export default Root;
-
-const styles = StyleSheet.create({});

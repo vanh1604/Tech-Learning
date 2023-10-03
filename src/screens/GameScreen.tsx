@@ -7,16 +7,16 @@ import CardList from "../components/Main/CardList";
 import { games } from "../constansts/items";
 
 const GameScreen = () => {
-	return (
-		<Column flex={1}>
-			<MainBackground>
-				<HomeHeader title="Trò chơi" />
-				<Column mx={6}> 
-				<CardList data={games} />
-				</Column>
-			</MainBackground>
-		</Column>
-	);
+  return (
+    <Column flex={1}>
+      <MainBackground>
+        <HomeHeader title="Trò chơi" />
+        <Column mx={6}>
+          <CardList data={games} />
+        </Column>
+      </MainBackground>
+    </Column>
+  );
 };
 
 export default GameScreen;

@@ -3,7 +3,7 @@ import { Box, NativeBaseProvider } from "native-base";
 import { StyleSheet, Text, View } from "react-native";
 import Home from "./src/screens/Home";
 import { Provider } from "react-redux";
-import Root from "./src/navigations/Root";
+
 import * as SplashScreen from "expo-splash-screen";
 import store from "./src/store";
 import { useEffect } from "react";
@@ -14,8 +14,9 @@ import {
   Quicksand_500Medium,
   Quicksand_600SemiBold,
   Quicksand_700Bold,
-} from '@expo-google-fonts/quicksand';
+} from "@expo-google-fonts/quicksand";
 import appTheme from "./src/theme";
+import Root from "./src/navigations/Root";
 
 SplashScreen.preventAutoHideAsync();
 export default function App() {
