@@ -1,15 +1,9 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { Box, Column, Icon, IconButton, Progress, Row, Text } from "native-base";
-
-import { quizzes } from "../../constansts/items";
-import { STYLES, colors } from "../../constansts/style";
-import QuizzItem from "../../components/Quizz/QuizzItem";
+import React, { useEffect, useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Box, Column, Progress, Text } from "native-base";
+import { STYLES } from "../../constansts/style";
 import QuizzDisplay from "../../components/Quizz/QuizzDisplay";
-import Footer from "../../components/Quizz/Footer/Footer";
-import Header1 from "../../components/Header1";
-import BackBtn from "../../components/BackBtn";
 import NotificationBox from "../../components/NotificationBox";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";

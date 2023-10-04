@@ -91,6 +91,7 @@ export default function Puzzle() {
 			/>
 			<Box alignItems={"flex-end"}>
 				<Image
+					alt="Đáp án"
 					w={200}
 					h={200}
 					source={{

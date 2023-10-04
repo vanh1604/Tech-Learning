@@ -1,5 +1,7 @@
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { CardProps } from "../components/Main/CardItem";
 import { CardListProps } from "../components/Main/CardList";
+import { firestore } from "../firebase";
 
 const quizEmptyArray = new Array(10).fill({ title: "", ans: [], order: 0 });
 
@@ -27,6 +29,7 @@ export const quizzes = quizEmptyArray.map((item: any, index: any) => {
 		order: index + 1,
 		rightAns: "B",
 		userAns: "",
+		id: `quiz${index}`,
 	};
 });
 
@@ -91,3 +94,15 @@ export const games = gamesEmtyArray.map((game, index) => {
 		title: "Lorem ipsum",
 	};
 });
+
+export const createQuiz = () => {
+	quizzes.forEach(async (quiz) => {
+		const docRef = doc(firestore, "quiz", quiz.id);
+		await setDoc(docRef, quiz);
+	});
+};
+
+export const createQuizScreenOnFirestore = async () => {
+	const docRef = doc(firestore, "cards", "quiz");
+	await setDoc(docRef, { data: quizz });
+};
