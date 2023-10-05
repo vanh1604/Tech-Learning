@@ -17,13 +17,11 @@ export interface QuizzProps {
 }
 
 const QuizzDisplay = (props: QuizzProps) => {
-	// const [selectedOption, setSelectedOption] = useState<QuizzItemProps | null>(null);
 	const questions: any = useSelector<any>((state) => state.answer);
 	const currentQuestion: (typeof questions)[0] = questions[props.order - 1];
 	const dispatch = useDispatch();
 	const handleOptionClick = (option: QuizzItemProps) => {
 		if (!props.isAnswering) {
-			// setSelectedOption(option);
 			dispatch(setUserChoice(option));
 		}
 	};

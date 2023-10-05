@@ -79,7 +79,6 @@ const AnswerQuizz = () => {
 			width={"100%"}
 		>
 			<ComponentHeader title="Giải đố" />
-
 			<Box px={6}>
 				<Box
 					flexDirection={"row"}
