@@ -1,8 +1,6 @@
+import { quizz, quizzes } from "./../constansts/items";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { quizzes } from "../constansts/items";
 import { QuizzItemProps } from "../components/Quizz/QuizzItem";
-import { doc, setDoc } from "firebase/firestore";
-import { firestore } from "../firebase";
 
 type LoadingState = {
 	isLoading: boolean;
@@ -18,11 +16,21 @@ const loadingSlice = createSlice({
 			// console.log(action.payload.order);
 			state[action.payload.order || 0].userAns = action.payload.answer;
 			//update data in firestore
-			const docRef = doc(firestore, "quiz", `quiz${action.payload.order}`);
-			setDoc(docRef, state[action.payload.order || 0]).catch((error) => console.log(error));
+		},
+		setQuizData: (state: typeof quizzes, action: PayloadAction<any>) => {
+			state = action.payload;
+		},
+		clearUserAns: (state: typeof quizzes) => {
+			const newState = state.map((item) => ({
+				...item,
+				userAns: "",
+			}));
+			state = newState;
 		},
 	},
 });
 
 export const setUserChoice = loadingSlice.actions.setUserChoice;
 export const answerReducer = loadingSlice.reducer;
+export const setQuizData = loadingSlice.actions.setQuizData;
+export const clearUserAns = loadingSlice.actions.clearUserAns;

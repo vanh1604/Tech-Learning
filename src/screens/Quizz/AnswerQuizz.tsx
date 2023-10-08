@@ -1,18 +1,21 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { Box, Column, Progress, Text } from "native-base";
 import { STYLES } from "../../constansts/style";
 import QuizzDisplay from "../../components/Quizz/QuizzDisplay";
 import NotificationBox from "../../components/NotificationBox";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import ComponentHeader from "../../components/Header/ComponentHeader";
 import BackgroundLayout from "../../components/BackgroundLayout";
+import { clearUserAns, setQuizData, setUserChoice } from "../../store/answer.reducer";
 
 const AnswerQuizz = () => {
 	const navigation = useNavigation<any>();
-	const questions: any = useSelector<RootState>((state) => state.answer);
+	const route = useRoute<any>();
+	const [questions, setQuestions] = useState<any>(route.params.quizzes);
+	const dispatch = useDispatch();
 	const [order, setOrder] = useState(1);
 	const [showModal, setShowModal] = useState(false);
 	const minOrder = 1;
@@ -56,6 +59,9 @@ const AnswerQuizz = () => {
 			clearInterval(intervalId); // Hủy bỏ interval khi component bị hủy
 		};
 	}, [countdown]);
+	useEffect(() => {
+		dispatch(setQuizData(questions));
+	}, [questions]);
 	const timeFormatted = (countdown: number) => {
 		const minute = Math.floor(countdown / 60);
 		const second = countdown % 60;
@@ -122,7 +128,10 @@ const AnswerQuizz = () => {
 					<Box w={"80%"}>
 						<BackgroundLayout style={styles.goBackButton}>
 							<TouchableOpacity
-								onPress={navigation.goBack}
+								onPress={() => {
+									navigation.goBack();
+									dispatch(clearUserAns());
+								}}
 								style={{ width: "100%", alignItems: "center" }}
 							>
 								<Text color={"#fff"}>XONG</Text>

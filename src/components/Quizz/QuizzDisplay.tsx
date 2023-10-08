@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, FlatList, Text } from "native-base";
 import QuizzItem, { QuizzItemProps } from "./QuizzItem";
 import { STYLES } from "../../constansts/style";
 import Footer from "./Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
-import { setUserChoice } from "../../store/answer.reducer";
+import { setQuizData, setUserChoice } from "../../store/answer.reducer";
 import { quizzes } from "../../constansts/items";
 
 export interface QuizzProps {

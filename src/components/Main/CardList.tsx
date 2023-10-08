@@ -12,6 +12,7 @@ const CardList = (props: CardListProps) => {
 	return (
 		<FlatList
 			data={props.data}
+			height={"100%"}
 			renderItem={({ item }) => (
 				<CardItem
 					{...item}

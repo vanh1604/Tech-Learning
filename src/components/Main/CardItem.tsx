@@ -9,6 +9,7 @@ import { ArrowCircleRight2 } from "iconsax-react-native";
 export interface CardProps extends TouchableOpacityProps {
 	title: string;
 	isQuizz?: boolean;
+	quizzes?: any[];
 	avata?: any;
 	isComplete?: boolean;
 	navigateTo?: string;

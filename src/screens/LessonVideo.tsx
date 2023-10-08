@@ -6,6 +6,7 @@ import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
+import YoutubePlayer from "react-native-youtube-iframe";
 
 const LessonVideo = () => {
 	const video = React.useRef<any>(null);
@@ -23,13 +24,13 @@ const LessonVideo = () => {
 	return (
 		<View style={styles.container}>
 			<StatusBar hidden />
-			<Video
-				ref={video}
-				style={styles.video}
-				source={lessons?.videoSource}
-				useNativeControls
-				resizeMode={ResizeMode.CONTAIN}
-				onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+			<YoutubePlayer
+				videoId={"KDThNBO0vgw"}
+				// video height -> screen width
+				height={windowWidth}
+				// video width -> screen height
+				width={windowHeight}
+				// prevent aspect ratio auto sizing
 			/>
 		</View>
 	);
