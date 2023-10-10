@@ -11,5 +11,7 @@ export type RootStackParams = {
   Game: undefined;
   Quiz: undefined;
   AnswerQuizz: undefined;
-  Puzzle: undefined;
+  Puzzle: {
+    id:string;
+  };
 };

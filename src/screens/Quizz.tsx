@@ -7,17 +7,14 @@ import CardList from "../components/Main/CardList";
 import { quizz } from "../constansts/items";
 
 const Quizz = () => {
-	return (
-		<MainBackground>
-			<HomeHeader title="Bài học" />
-			<Column mx={6}>
-				<CardList
-					data={quizz}
-					isQuizz
-				/>
-			</Column>
-		</MainBackground>
-	);
+  return (
+    <MainBackground>
+      <HomeHeader title="Bài học" />
+      <Column mx={6}>
+        <CardList data={quizz} isQuizz />
+      </Column>
+    </MainBackground>
+  );
 };
 
 export default Quizz;
