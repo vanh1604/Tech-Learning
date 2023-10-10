@@ -271,6 +271,19 @@ export const lessons: CardProps[] = [
 		id: `lesson0`,
 		paramList: {
 			id: `lesson0`,
+			videoSource: "XqZsoesa55w",
+		},
+		avata: {
+			uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "",
+		id: `lesson1`,
+		paramList: {
+			id: `lesson1`,
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
 			uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",

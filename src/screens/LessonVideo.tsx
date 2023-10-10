@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { Video, ResizeMode } from "expo-av";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { windowHeight, windowWidth } from "../constansts/style";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
@@ -9,11 +9,9 @@ import { firestore } from "../firebase";
 import YoutubePlayer from "react-native-youtube-iframe";
 
 const LessonVideo = () => {
-	const video = React.useRef<any>(null);
-	const [status, setStatus] = React.useState<any>({});
 	const route = useRoute<any>();
 	const [lessons, setLessons] = useState<any>();
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const getData = async () => {
 			const docRef = doc(firestore, "lesson", route.params.id);
 			const lesson = (await getDoc(docRef)).data();
@@ -25,7 +23,7 @@ const LessonVideo = () => {
 		<View style={styles.container}>
 			<StatusBar hidden />
 			<YoutubePlayer
-				videoId={"KDThNBO0vgw"}
+				videoId={lessons?.videoSource}
 				// video height -> screen width
 				height={windowWidth}
 				// video width -> screen height
