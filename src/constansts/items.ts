@@ -263,25 +263,37 @@ export const quizzes2 = [
   },
 ];
 
-const lessonsEmptyArray: CardProps[] = new Array(10).fill({
+const lessonsEmpty: CardProps = {
   navigateTo: "LessonVideo",
-  title: "Lorem ipsum",
-  id: 0,
-});
+  title: "",
+};
 
-export const lessons: CardProps[] = lessonsEmptyArray.map((lesson, index) => {
-  return {
-    ...lesson,
-    id: `lesson${index}`,
+export const lessons: CardProps[] = [
+  {
+    ...lessonsEmpty,
+    title: "",
+    id: `lesson0`,
     paramList: {
-      id: `lesson${index}`,
-      videoSource: { uri: "https://pic.pikbest.com/19/58/54/88f888piCm76.mp4" },
+      id: `lesson0`,
+      videoSource: "XqZsoesa55w",
     },
     avata: {
       uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",
     },
-  };
-});
+  },
+  {
+    ...lessonsEmpty,
+    title: "",
+    id: `lesson1`,
+    paramList: {
+      id: `lesson1`,
+      videoSource: "KDThNBO0vgw",
+    },
+    avata: {
+      uri: "https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-gau-truc-1.jpg",
+    },
+  },
+];
 
 const quizEmty: CardProps = {
   navigateTo: "Quiz",
