@@ -21,10 +21,11 @@ const loadingSlice = createSlice({
 			state = action.payload;
 		},
 		clearUserAns: (state: typeof quizzes) => {
-			const newState = state.map((item) => ({
-				...item,
-				userAns: "",
-			}));
+			const newState = state.map((item, index) => {
+				const newItem = { ...item, userAns: "" };
+				state[index] = newItem;
+				return newItem;
+			});
 			state = newState;
 		},
 	},

@@ -24,10 +24,10 @@ const LessonVideo = () => {
 			<StatusBar hidden />
 			<YoutubePlayer
 				videoId={lessons?.videoSource}
-				// video height -> screen width
-				height={windowWidth}
-				// video width -> screen height
+				// width={windowWidth}
+				// height={windowWidth * 0.75}
 				width={windowHeight}
+				height={windowWidth}
 				// prevent aspect ratio auto sizing
 			/>
 		</View>
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
+		backgroundColor: "#000",
 		transform: "rotate(90deg)",
 	},
 	buttons: {
