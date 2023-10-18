@@ -7,6 +7,7 @@ import { StatusBar } from "expo-status-bar";
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import YoutubePlayer from "react-native-youtube-iframe";
+import { formatYoutubeLink } from "../constansts/functions";
 
 const LessonVideo = () => {
 	const route = useRoute<any>();
@@ -23,7 +24,7 @@ const LessonVideo = () => {
 		<View style={styles.container}>
 			<StatusBar hidden />
 			<YoutubePlayer
-				videoId={lessons?.videoSource}
+				videoId={formatYoutubeLink(lessons?.videoSource || "")}
 				// width={windowWidth}
 				// height={windowWidth * 0.75}
 				width={windowHeight}

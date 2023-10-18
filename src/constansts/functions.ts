@@ -26,3 +26,15 @@ export const timeFormat = (time: Date) => {
 	};
 	return `${format(time.getHours())}:${format(time.getMinutes())}`;
 };
+
+export const getStringBetween = (str: string, char1: string, char2: string) => {
+	if (!str.includes(char1) || !str.includes(char2)) {
+		return str;
+	}
+	return str.split(char1)[1].split(char2)[0];
+};
+
+export const formatYoutubeLink = (ytLink: string) => {
+	console.log(ytLink);
+	return getStringBetween(ytLink.replace("https://www.youtube.com/watch?v", ""), "=", "&");
+};
