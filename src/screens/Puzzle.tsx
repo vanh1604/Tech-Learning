@@ -37,7 +37,7 @@ export default function Puzzle(props: Props) {
     (nextPieces: PuzzlePieces, nextHidden: number | null): void => {
       setPieces(nextPieces);
       setHidden(nextHidden);
-      if (nextPieces !== ([0, 1, 2, 3, 4, 5, 6, 7, 8] as PuzzlePieces)) {
+      if (nextPieces === ([0, 1, 2, 3, 4, 5, 6, 7, 8] as PuzzlePieces)) {
         toggleNoti();
       }
     },
