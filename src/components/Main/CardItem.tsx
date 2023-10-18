@@ -32,6 +32,7 @@ const MainItem = (props: CardProps) => {
           h={20}
           borderRadius={16}
           alt="avata"
+          resizeMode="cover"
         />
         <Text style={styles.cardTitle}>{props.title}</Text>
         <ArrowCircleRight2 size="24" color="#fff" />
