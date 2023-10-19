@@ -17,16 +17,15 @@ const loadingSlice = createSlice({
 			state[action.payload.order || 0].userAns = action.payload.answer;
 			//update data in firestore
 		},
-		setQuizData: (state: typeof quizzes, action: PayloadAction<any>) => {
-			state = action.payload;
-		},
+		setQuizData: (state: typeof quizzes, action: PayloadAction<typeof quizzes>) => action.payload,
+
 		clearUserAns: (state: typeof quizzes) => {
 			const newState = state.map((item, index) => {
 				const newItem = { ...item, userAns: "" };
 				state[index] = newItem;
 				return newItem;
 			});
-			state = newState;
+			return newState;
 		},
 	},
 });

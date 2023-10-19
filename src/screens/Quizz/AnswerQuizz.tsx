@@ -1,25 +1,29 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useIsFocused, useNavigation, useRoute } from "@react-navigation/native";
 import { Box, Column, Progress, Text } from "native-base";
 import { STYLES } from "../../constansts/style";
 import QuizzDisplay from "../../components/Quizz/QuizzDisplay";
 import NotificationBox from "../../components/NotificationBox";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { useDispatch } from "react-redux";
 import ComponentHeader from "../../components/Header/ComponentHeader";
 import BackgroundLayout from "../../components/BackgroundLayout";
-import { clearUserAns, setQuizData, setUserChoice } from "../../store/answer.reducer";
+import { setQuizData } from "../../store/answer.reducer";
+import { updateIsComplete, updateQuizItemsData } from "../../store/quiz.reducer";
+import { quizz } from "../../constansts/items";
+import { useAppSelector } from "../../store";
 
 const AnswerQuizz = () => {
 	const navigation = useNavigation<any>();
+	const isFocused = useIsFocused();
 	const route = useRoute<any>();
-	const [questions, setQuestions] = useState<any>(route.params.quizzes);
 	const dispatch = useDispatch();
+	const questions = useAppSelector((state) => state.answer);
 	const [order, setOrder] = useState(1);
 	const [showModal, setShowModal] = useState(false);
 	const minOrder = 1;
 	const maxOrder = questions.length;
+	const currentQuizIndex = Number(route.params.id.replace("quiz", ""));
 	const onEndQuiz = () => {
 		toggleNoti();
 	};
@@ -60,9 +64,8 @@ const AnswerQuizz = () => {
 		};
 	}, [countdown]);
 	useEffect(() => {
-		dispatch(setQuizData(questions));
-		setQuestions(route.params.quizzes);
-	}, []);
+		dispatch(setQuizData(route.params.quizzes));
+	}, [isFocused]);
 	const timeFormatted = (countdown: number) => {
 		const minute = Math.floor(countdown / 60);
 		const second = countdown % 60;
@@ -73,7 +76,7 @@ const AnswerQuizz = () => {
 	};
 	const countUserRightAns = () => {
 		let dem = 0;
-		questions.forEach((question: (typeof questions)[0]) => {
+		questions.map((question: (typeof questions)[0]) => {
 			if (question.rightAns === question.userAns) dem++;
 		});
 		return dem;
@@ -130,8 +133,9 @@ const AnswerQuizz = () => {
 						<BackgroundLayout style={styles.goBackButton}>
 							<TouchableOpacity
 								onPress={() => {
+									dispatch(updateQuizItemsData({ index: currentQuizIndex, data: { ...quizz[currentQuizIndex], quizzes: questions } }));
+									dispatch(updateIsComplete({ index: currentQuizIndex, rightAnsCount: countUserRightAns() }));
 									navigation.goBack();
-									dispatch(clearUserAns());
 								}}
 								style={{ width: "100%", alignItems: "center" }}
 							>

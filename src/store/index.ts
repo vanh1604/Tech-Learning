@@ -4,12 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import type { TypedUseSelectorHook } from "react-redux";
 import { errorReducer } from "./error.reducer";
 import { loadingReducer } from "./loading.reducer";
+import { quizzReducer } from "./quiz.reducer";
 
 const store = configureStore({
 	reducer: {
 		error: errorReducer,
 		loading: loadingReducer,
 		answer: answerReducer,
+		quiz: quizzReducer,
 	},
 });
 
