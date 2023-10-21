@@ -12,15 +12,17 @@ const HomeHeader = (props: HomeHeaderProps) => {
 		<Column
 			bgColor={colors.blurBackground}
 			safeAreaY
-			pt={6}
-			pb={1}
+			pt={2}
+			pb={2}
 			mb={6}
 		>
 			<Center>
 				<Heading
 					color={"#fff"}
-					fontSize={16}
+					fontSize={24}
 					bold
+					textTransform={'uppercase'}
+					shadow={2}
 				>
 					{props.title}
 				</Heading>

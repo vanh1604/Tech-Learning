@@ -12,6 +12,7 @@ const ComponentHeader = (props: HomeHeaderProps) => {
 		<Row
 			justifyContent={"space-between"}
 			safeAreaTop
+			p={2}
 		>
 			<TouchableOpacity onPress={navigation.goBack}>
 				<AntDesign
