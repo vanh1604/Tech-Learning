@@ -289,6 +289,78 @@ export const lessons: CardProps[] = [
 			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
+	{
+		...lessonsEmpty,
+		title: "Bài 3: Tọa độ, di chuyển và hướng",
+		id: `lesson2`,
+		paramList: {
+			id: `lesson2`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 4: Lệnh sự kiện",
+		id: `lesson3`,
+		paramList: {
+			id: `lesson3`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 5: Lệnh điều kiện",
+		id: `lesson4`,
+		paramList: {
+			id: `lesson4`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 5: Lệnh điều kiện",
+		id: `lesson4`,
+		paramList: {
+			id: `lesson4`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 6: Lệnh lặp",
+		id: `lesson5`,
+		paramList: {
+			id: `lesson5`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 7: Lệnh cảm biến",
+		id: `lesson6`,
+		paramList: {
+			id: `lesson6`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
 ];
 
 const quizEmty: CardProps = {
@@ -302,7 +374,7 @@ const quizEmty: CardProps = {
 export const quizz = [
 	{
 		...quizEmty,
-		title: "hehehehe",
+		title: "Câu hỏi ôn tập bài 1",
 		id: `quiz0`,
 		paramList: {
 			id: `quiz0`,
@@ -314,7 +386,7 @@ export const quizz = [
 	},
 	{
 		...quizEmty,
-		title: "hehehehe",
+		title: "Câu hỏi ôn tập bài 2",
 		id: `quiz1`,
 		paramList: {
 			id: `quiz1`,
