@@ -1,4 +1,3 @@
-import { setQuizData } from "./answer.reducer";
 import { quizz } from "./../constansts/items";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 

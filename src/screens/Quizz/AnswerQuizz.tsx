@@ -5,20 +5,20 @@ import { Box, Column, Progress, Text } from "native-base";
 import { STYLES } from "../../constansts/style";
 import QuizzDisplay from "../../components/Quizz/QuizzDisplay";
 import NotificationBox from "../../components/NotificationBox";
-import { useDispatch } from "react-redux";
 import ComponentHeader from "../../components/Header/ComponentHeader";
 import BackgroundLayout from "../../components/BackgroundLayout";
-import { setQuizData } from "../../store/answer.reducer";
 import { updateIsComplete, updateQuizItemsData } from "../../store/quiz.reducer";
-import { quizz } from "../../constansts/items";
+import { quizz, quizzes } from "../../constansts/items";
 import { useAppSelector } from "../../store";
+import { useDispatch } from "react-redux";
+import { QuizzItemProps } from "../../components/Quizz/QuizzItem";
 
 const AnswerQuizz = () => {
 	const navigation = useNavigation<any>();
 	const isFocused = useIsFocused();
 	const route = useRoute<any>();
 	const dispatch = useDispatch();
-	const questions = useAppSelector((state) => state.answer);
+	const [questions, setQuestions] = useState<typeof quizzes>(route.params.quizzes);
 	const [order, setOrder] = useState(1);
 	const [showModal, setShowModal] = useState(false);
 	const minOrder = 1;
@@ -45,6 +45,7 @@ const AnswerQuizz = () => {
 	};
 	const [countdown, setCountdown] = useState(180); // Initial countdown time in seconds
 	const currentQuestion = questions[order - 1];
+	// console.log("currentQuestion", currentQuestion.ans);
 	const ansOptions = currentQuestion.ans.map((item: any) => {
 		return {
 			...item,
@@ -63,9 +64,6 @@ const AnswerQuizz = () => {
 			clearInterval(intervalId); // Hủy bỏ interval khi component bị hủy
 		};
 	}, [countdown]);
-	useEffect(() => {
-		dispatch(setQuizData(route.params.quizzes));
-	}, [isFocused]);
 	const timeFormatted = (countdown: number) => {
 		const minute = Math.floor(countdown / 60);
 		const second = countdown % 60;
@@ -122,6 +120,9 @@ const AnswerQuizz = () => {
 					title={currentQuestion.title}
 					onOrderChange={onOrderChange}
 					questions={questions}
+					onAnswer={(item: QuizzItemProps) => {
+						currentQuestion.userAns = item.answer;
+					}}
 				/>
 			</Box>
 			<NotificationBox

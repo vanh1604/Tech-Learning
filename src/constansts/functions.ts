@@ -38,8 +38,5 @@ export const getStringBetween = (str: string, char1: string, char2: string) => {
 };
 
 export const formatYoutubeLink = (ytLink: string) => {
-	console.log(ytLink);
-	console.log(getStringBetween(ytLink, "=", "&"));
-
 	return getStringBetween(ytLink, "=", "&");
 };

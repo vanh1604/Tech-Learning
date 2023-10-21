@@ -4,8 +4,6 @@ import MainBackground from "../components/HomeTab/MainBackground";
 import HomeHeader from "../components/Header/HomeHeader";
 import { Column } from "native-base";
 import CardList from "../components/Main/CardList";
-import { useDispatch, useSelector } from "react-redux";
-import { clearUserAns } from "../store/answer.reducer";
 import { useAppDispatch, useAppSelector } from "../store";
 import { useIsFocused } from "@react-navigation/native";
 import { quizz } from "../constansts/items";
@@ -20,7 +18,10 @@ const Quizz = () => {
 	return (
 		<MainBackground>
 			<HomeHeader title="Giải đố" />
-			<Column mx={6}>
+			<Column
+				mx={6}
+				flex={1}
+			>
 				<CardList
 					data={quiz}
 					isQuizz

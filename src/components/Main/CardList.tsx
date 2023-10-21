@@ -4,19 +4,23 @@ import { FlatList } from "native-base";
 import CardItem, { CardProps } from "./CardItem";
 
 export interface CardListProps {
-  data: CardProps[];
-  isQuizz?: boolean;
+	data: CardProps[];
+	isQuizz?: boolean;
 }
 
 const CardList = (props: CardListProps) => {
-  return (
-    <FlatList
-      data={props.data}
-      height={"100%"}
-      renderItem={({ item }) => <CardItem {...item} {...props} />}
-      keyExtractor={(item, index) => index.toString()}
-    />
-  );
+	return (
+		<FlatList
+			data={props.data}
+			renderItem={({ item }) => (
+				<CardItem
+					{...item}
+					{...props}
+				/>
+			)}
+			keyExtractor={(item, index) => index.toString()}
+		/>
+	);
 };
 
 export default CardList;

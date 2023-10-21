@@ -271,7 +271,7 @@ export const lessons: CardProps[] = [
 		id: `lesson0`,
 		paramList: {
 			id: `lesson0`,
-			videoSource: "https://www.youtube.com/watch?v=5KoOAng2-kg&list=RDKDThNBO0vgw&index=2",
+			videoSource: "https://www.youtube.com/watch?v=QuZA24FEiIs&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=8",
 		},
 		avata: {
 			uri: "https://www.icantech.vn/_next/image?url=https%3A%2F%2Fs3.icankid.io%2Ficantech%2Fcms%2F3_3x_960b0d2454.png&w=1920&q=100",
@@ -283,10 +283,106 @@ export const lessons: CardProps[] = [
 		id: `lesson1`,
 		paramList: {
 			id: `lesson1`,
-			videoSource: "KDThNBO0vgw",
+			videoSource: "https://www.youtube.com/watch?v=6Sszrx9GAnE&t=50s",
 		},
 		avata: {
 			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 3: Tọa độ, di chuyển và hướng",
+		id: `lesson2`,
+		paramList: {
+			id: `lesson2`,
+			videoSource: "https://www.youtube.com/watch?v=vcUnRDfnl90",
+		},
+		avata: {
+			uri: "https://lh5.googleusercontent.com/QADcDgGl6lrLtMvVD4he3U9ks22VM-LN-vsip7dD1o7c6b-F_2MRnxcKxYtHYQI8ag5vtEMjHzvKhc3QKsh95lI2cT5vHZC24C9tmFOFVV7VQvyb7LXKDl4MRG1c9n93QTyb3suw",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 4: Lệnh sự kiện",
+		id: `lesson3`,
+		paramList: {
+			id: `lesson3`,
+			videoSource: "https://www.youtube.com/watch?v=X5JZZkQLX10",
+		},
+		avata: {
+			uri: "https://laptrinhscratch.com/wp-content/uploads/2020/04/sound-1-1024x827.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 5: Lệnh điều kiện",
+		id: `lesson4`,
+		paramList: {
+			id: `lesson4`,
+			videoSource: "https://www.youtube.com/watch?v=W6ulSrQG7wk",
+		},
+		avata: {
+			uri: "https://blogdaytinhoc.com/public/files/images/2023/04/30/lenh-dieu-kien-2.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 6: Lệnh lặp",
+		id: `lesson5`,
+		paramList: {
+			id: `lesson5`,
+			videoSource: "https://www.youtube.com/watch?v=C-9_wtp9CbY&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=13",
+		},
+		avata: {
+			uri: "https://blogdaytinhoc.com/public/files/images/2023/04/30/lap-lien-tuc.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 7: Lệnh cảm biến",
+		id: `lesson6`,
+		paramList: {
+			id: `lesson6`,
+			videoSource: "https://www.youtube.com/watch?v=FyXyznhmnrA&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=14",
+		},
+		avata: {
+			uri: "http://thcambinh.camxuyen.edu.vn/upload/55781/20190409/grab4ee06nhom_lenh_look_scratch.png",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 8: Vẽ hình nhân vật",
+		id: `lesson7`,
+		paramList: {
+			id: `lesson7`,
+			videoSource: "https://www.youtube.com/watch?v=umgQZNQt0Ts&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=15",
+		},
+		avata: {
+			uri: "https://steamvn-blog.sfo2.cdn.digitaloceanspaces.com/2021/02/image-21.png",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 9: Tạo âm thanh",
+		id: `lesson8`,
+		paramList: {
+			id: `lesson8`,
+			videoSource: "https://www.youtube.com/watch?v=UNn215J0PvI&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=16",
+		},
+		avata: {
+			uri: "https://steamvn-blog.sfo2.cdn.digitaloceanspaces.com/2021/02/image-4-1024x486.png",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 10: Lệnh hội thoại",
+		id: `lesson9`,
+		paramList: {
+			id: `lesson9`,
+			videoSource: "https://www.youtube.com/watch?v=NQK0jHNRszI&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=17",
+		},
+		avata: {
+			uri: "https://steamvn-blog.sfo2.cdn.digitaloceanspaces.com/2021/02/image.png",
 		},
 	},
 ];
@@ -302,7 +398,7 @@ const quizEmty: CardProps = {
 export const quizz = [
 	{
 		...quizEmty,
-		title: "hehehehe",
+		title: "Giới thiệu về Scratch",
 		id: `quiz0`,
 		paramList: {
 			id: `quiz0`,
@@ -314,7 +410,7 @@ export const quizz = [
 	},
 	{
 		...quizEmty,
-		title: "hehehehe",
+		title: "Tạo nhân vật trong Scratch",
 		id: `quiz1`,
 		paramList: {
 			id: `quiz1`,
