@@ -259,6 +259,134 @@ export const quizzes2 = [
 	},
 ];
 
+export const quizzes3 = [
+	{
+		title: "Trong Scratch, tọa độ (0,0) nằm ở đâu trên màn hình?",
+		ans: [
+			{
+				answer: "A",
+				title: " Góc trên bên trái",
+			},
+			{
+				answer: "B",
+				title: "Góc dưới bên phải",
+			},
+			{
+				answer: "C",
+				title: "Trung tâm màn hình",
+			},
+			{
+				answer: "D",
+				title: "Góc trên bên phải",
+			},
+		],
+		order: 1,
+		rightAns: "C",
+		userAns: "",
+		id: `quiz${0}`,
+	},
+	{
+		title: "Lệnh nào sau đây cho phép di chuyển nhân vật đến một vị trí cụ thể trên màn hình?",
+		ans: [
+			{
+				answer: "A",
+				title: " Di chuyển 10 bước",
+			},
+			{
+				answer: "B",
+				title: " Quay 15 độ",
+			},
+			{
+				answer: "C",
+				title: "Đi tới x: 0 y: 0",
+			},
+			{
+				answer: "D",
+				title: "Đổi hướng 90 độ",
+			},
+		],
+		order: 2,
+		rightAns: "C",
+		userAns: "",
+		id: `quiz${1}`,
+	},
+	{
+		title: "Khi bạn muốn nhân vật của mình di chuyển về phía trước, bạn sẽ sử dụng lệnh nào?",
+		ans: [
+			{
+				answer: "A",
+				title: "Di chuyển 10 bước",
+			},
+			{
+				answer: "B",
+				title: "Quay 15 độ",
+			},
+			{
+				answer: "C",
+				title: "Đi tới x: 0 y: 0",
+			},
+			{
+				answer: "D",
+				title: "Đổi hướng 90 độ",
+			},
+		],
+		order: 3,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${2}`,
+	},
+	{
+		title: "Lệnh “Đặt hướng về 90 độ” sẽ khiến nhân vật quay về hướng nào?",
+		ans: [
+			{
+				answer: "A",
+				title: "Lên trên",
+			},
+			{
+				answer: "B",
+				title: "Xuống dưới",
+			},
+			{
+				answer: "C",
+				title: "Sang phải",
+			},
+			{
+				answer: "D",
+				title: " Sang trái",
+			},
+		],
+		order: 4,
+		rightAns: "C",
+		userAns: "",
+		id: `quiz${3}`,
+	},
+	{
+		title: "Khi bạn muốn nhân vật của mình di chuyển theo một hình vuông, bạn sẽ sử dụng lệnh nào?",
+		ans: [
+			{
+				answer: "A",
+				title: "Di chuyển 10 bước",
+			},
+			{
+				answer: "B",
+				title: "Lặp lại 4 [di chuyển 10 bước, quay phải 90 độ]",
+			},
+			{
+				answer: "C",
+				title: "",
+			},
+			{
+				answer: "D",
+				title: "",
+			},
+		],
+		order: 5,
+		rightAns: "C",
+		userAns: "",
+		id: `quiz${4}`,
+	},
+];
+
 const lessonsEmpty: CardProps = {
 	navigateTo: "LessonVideo",
 	title: "",
@@ -295,10 +423,10 @@ export const lessons: CardProps[] = [
 		id: `lesson2`,
 		paramList: {
 			id: `lesson2`,
-			videoSource: "https://www.youtube.com/watch?v=vcUnRDfnl90",
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
-			uri: "https://lh5.googleusercontent.com/QADcDgGl6lrLtMvVD4he3U9ks22VM-LN-vsip7dD1o7c6b-F_2MRnxcKxYtHYQI8ag5vtEMjHzvKhc3QKsh95lI2cT5vHZC24C9tmFOFVV7VQvyb7LXKDl4MRG1c9n93QTyb3suw",
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
 	{
@@ -307,10 +435,10 @@ export const lessons: CardProps[] = [
 		id: `lesson3`,
 		paramList: {
 			id: `lesson3`,
-			videoSource: "https://www.youtube.com/watch?v=X5JZZkQLX10",
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
-			uri: "https://laptrinhscratch.com/wp-content/uploads/2020/04/sound-1-1024x827.jpg",
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
 	{
@@ -319,10 +447,22 @@ export const lessons: CardProps[] = [
 		id: `lesson4`,
 		paramList: {
 			id: `lesson4`,
-			videoSource: "https://www.youtube.com/watch?v=W6ulSrQG7wk",
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
-			uri: "https://blogdaytinhoc.com/public/files/images/2023/04/30/lenh-dieu-kien-2.jpg",
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 5: Lệnh điều kiện",
+		id: `lesson4`,
+		paramList: {
+			id: `lesson4`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
 	{
@@ -331,10 +471,10 @@ export const lessons: CardProps[] = [
 		id: `lesson5`,
 		paramList: {
 			id: `lesson5`,
-			videoSource: "https://www.youtube.com/watch?v=C-9_wtp9CbY&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=13",
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
-			uri: "https://blogdaytinhoc.com/public/files/images/2023/04/30/lap-lien-tuc.jpg",
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
 	{
@@ -343,46 +483,10 @@ export const lessons: CardProps[] = [
 		id: `lesson6`,
 		paramList: {
 			id: `lesson6`,
-			videoSource: "https://www.youtube.com/watch?v=FyXyznhmnrA&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=14",
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
-			uri: "http://thcambinh.camxuyen.edu.vn/upload/55781/20190409/grab4ee06nhom_lenh_look_scratch.png",
-		},
-	},
-	{
-		...lessonsEmpty,
-		title: "Bài 8: Vẽ hình nhân vật",
-		id: `lesson7`,
-		paramList: {
-			id: `lesson7`,
-			videoSource: "https://www.youtube.com/watch?v=umgQZNQt0Ts&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=15",
-		},
-		avata: {
-			uri: "https://steamvn-blog.sfo2.cdn.digitaloceanspaces.com/2021/02/image-21.png",
-		},
-	},
-	{
-		...lessonsEmpty,
-		title: "Bài 9: Tạo âm thanh",
-		id: `lesson8`,
-		paramList: {
-			id: `lesson8`,
-			videoSource: "https://www.youtube.com/watch?v=UNn215J0PvI&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=16",
-		},
-		avata: {
-			uri: "https://steamvn-blog.sfo2.cdn.digitaloceanspaces.com/2021/02/image-4-1024x486.png",
-		},
-	},
-	{
-		...lessonsEmpty,
-		title: "Bài 10: Lệnh hội thoại",
-		id: `lesson9`,
-		paramList: {
-			id: `lesson9`,
-			videoSource: "https://www.youtube.com/watch?v=NQK0jHNRszI&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=17",
-		},
-		avata: {
-			uri: "https://steamvn-blog.sfo2.cdn.digitaloceanspaces.com/2021/02/image.png",
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
 ];
@@ -410,7 +514,7 @@ export const quizz = [
 	},
 	{
 		...quizEmty,
-		title: "Tạo nhân vật trong Scratch",
+		title: "Câu hỏi ôn tập bài 2",
 		id: `quiz1`,
 		paramList: {
 			id: `quiz1`,

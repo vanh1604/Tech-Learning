@@ -23,7 +23,7 @@ const QuizzDisplay = (props: QuizzProps) => {
 			<Text style={[STYLES.title, { marginBottom: 4 }]}>Câu {props.order}:</Text>
 			<Text mb={8}>{props.title}</Text>
 			{props.ans.map((item, index) => {
-				const isBold = (!props.isAnswering && currentQuestion.userAns === item.answer) || (props.isAnswering && item.answer == quizzes[item.order || 0].rightAns);
+				const isBold = (!props.isAnswering && currentQuestion.userAns === item.answer) || (props.isAnswering && item.answer == questions[item.order || 0].rightAns);
 				return (
 					<QuizzItem
 						{...item}

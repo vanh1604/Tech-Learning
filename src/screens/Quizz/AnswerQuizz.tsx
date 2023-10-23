@@ -52,6 +52,9 @@ const AnswerQuizz = () => {
 		};
 	});
 	useEffect(() => {
+		setQuestions(route.params.quizzes);
+	}, [isFocused]);
+	useEffect(() => {
 		const intervalId = setInterval(() => {
 			if (countdown === 0) {
 				onEndQuiz();
