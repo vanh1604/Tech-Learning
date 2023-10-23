@@ -8,19 +8,20 @@ import { createLessons, lessons } from "../constansts/items";
 
 const Lesson = () => {
 	return (
-		<ScrollView>
-			<MainBackground>
-				<Box
-					position={"fixed"}
-					top={0}
-				>
-					<HomeHeader title="Bài học" />
-				</Box>
-				<Column mx={6}>
-					<CardList data={lessons} />
-				</Column>
-			</MainBackground>
-		</ScrollView>
+		<MainBackground>
+			<Box
+				position={"fixed"}
+				top={0}
+			>
+				<HomeHeader title="Bài học" />
+			</Box>
+			<Column
+				mx={6}
+				flex={1}
+			>
+				<CardList data={lessons} />
+			</Column>
+		</MainBackground>
 	);
 };
 

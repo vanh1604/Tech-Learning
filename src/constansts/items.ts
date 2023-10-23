@@ -386,6 +386,261 @@ export const quizzes3 = [
 		id: `quiz${4}`,
 	},
 ];
+export const quizzes4 = [
+	{
+		title: "Lệnh nào sau đây  là lệnh sự kiện trong Scratch?",
+		ans: [
+			{
+				answer: "A",
+				title: " Khi nhấp chuột vào",
+			},
+			{
+				answer: "B",
+				title: "Khi nhấp chuột phải",
+			},
+			{
+				answer: "C",
+				title: "Khi nhấp chuột trái",
+			},
+			{
+				answer: "D",
+				title: "Khi nhấp chuột giữa",
+			},
+		],
+		order: 1,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${0}`,
+	},
+	{
+		title: "Lệnh “Khi nhấp chuột vào” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: "Kích hoạt khi nhấp chuột vào màn hình",
+			},
+			{
+				answer: "B",
+				title: "Kích hoạt khi nhấp chuột vào sprite,",
+			},
+			{
+				answer: "C",
+				title: " Kích hoạt khi nhấp chuột vào backdrop",
+			},
+			{
+				answer: "D",
+				title: "Kích hoạt khi nhấp chuột vào stage",
+			},
+		],
+		order: 2,
+		rightAns: "B",
+		userAns: "",
+		id: `quiz${1}`,
+	},
+	{
+		title: "Lệnh “Khi backdrop chuyển sang” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: " Kích hoạt khi backdrop chuyển sang một backdrop khác",
+			},
+			{
+				answer: "B",
+				title: "Kích hoạt khi backdrop chuyển sang một sprite khác",
+			},
+			{
+				answer: "C",
+				title: "Kích hoạt khi backdrop chuyển sang một stage khác",
+			},
+			{
+				answer: "D",
+				title: "Không có tác dụng gì",
+			},
+		],
+		order: 3,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${2}`,
+	},
+	{
+		title: "Lệnh “Khi nhận được” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: "Kích hoạt khi nhận được một tin nhắn cụ thể",
+			},
+			{
+				answer: "B",
+				title: "Kích hoạt khi nhận được một sprite cụ thể",
+			},
+			{
+				answer: "C",
+				title: "Kích hoạt khi nhận được một backdrop cụ thể",
+			},
+			{
+				answer: "D",
+				title: " Không có tác dụng gì",
+			},
+		],
+		order: 4,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${3}`,
+	},
+	{
+		title: "Lệnh “Khi bắt đầu dự án” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: "Kích hoạt khi bắt đầu chạy dự án",
+			},
+			{
+				answer: "B",
+				title: " Kích hoạt khi bắt đầu chỉnh sửa dự án",
+			},
+			{
+				answer: "C",
+				title: " Kích hoạt khi bắt đầu xóa dự án",
+			},
+			{
+				answer: "D",
+				title: " Không có tác dụng gì",
+			},
+		],
+		order: 5,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${4}`,
+	},
+];
+
+export const quizzes5 = [
+	{
+		title: "Lệnh nào sau đây không phải là lệnh điều kiện trong Scratch?",
+		ans: [
+			{
+				answer: "A",
+				title: " if then",
+			},
+			{
+				answer: "B",
+				title: " if else",
+			},
+			{
+				answer: "C",
+				title: "repeat until",
+			},
+			{
+				answer: "D",
+				title: "forever",
+			},
+		],
+		order: 1,
+		rightAns: "D",
+		userAns: "",
+		id: `quiz${0}`,
+	},
+	{
+		title: "Lệnh “if then” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: "Thực hiện một khối lệnh nếu điều kiện đúng",
+			},
+			{
+				answer: "B",
+				title: "Thực hiện một khối lệnh nếu điều kiện sai",
+			},
+			{
+				answer: "C",
+				title: "Thực hiện một khối lệnh nếu sprite được nhấp chuột vào",
+			},
+			{
+				answer: "D",
+				title: "Thực hiện một khối lệnh nếu backdrop được nhấp chuột vào",
+			},
+		],
+		order: 2,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${1}`,
+	},
+	{
+		title: "Lệnh “if else” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: "Thực hiện một khối lệnh nếu điều kiện đúng",
+			},
+			{
+				answer: "B",
+				title: "Thực hiện một khối lệnh nếu điều kiện sai",
+			},
+			{
+				answer: "C",
+				title: "Thực hiện một khối lệnh nếu sprite được nhấp chuột vào",
+			},
+			{
+				answer: "D",
+				title: "Thực hiện một khối lệnh nếu backdrop được nhấp chuột vào",
+			},
+		],
+		order: 3,
+		rightAns: "B",
+		userAns: "",
+		id: `quiz${2}`,
+	},
+	{
+		title: "Lệnh “repeat until” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: "Lặp lại một khối lệnh cho đến khi điều kiện đúng",
+			},
+			{
+				answer: "B",
+				title: "Lặp lại một khối lệnh cho đến khi điều kiện sai",
+			},
+			{
+				answer: "C",
+				title: "Lặp lại một khối lệnh cho đến khi sprite được nhấp chuột vào",
+			},
+			{
+				answer: "D",
+				title: "Lặp lại một khối lệnh cho đến khi backdrop được nhấp chuột vào",
+			},
+		],
+		order: 4,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${3}`,
+	},
+	{
+		title: "Lệnh “forever” trong Scratch có tác dụng gì?",
+		ans: [
+			{
+				answer: "A",
+				title: " Lặp lại một khối lệnh mãi mãi cho đến khi dừng chương trình",
+			},
+			{
+				answer: "B",
+				title: "Lặp lại một khối lệnh mãi mãi cho đến khi sprite được nhấp chuột vào",
+			},
+			{
+				answer: "C",
+				title: "Lặp lại một khối lệnh mãi mãi cho đến khi backdrop được nhấp chuột vào",
+			},
+			{
+				answer: "D",
+				title: "Không có tác dụng gì",
+			},
+		],
+		order: 5,
+		rightAns: "A",
+		userAns: "",
+		id: `quiz${4}`,
+	},
+];
 
 const lessonsEmpty: CardProps = {
 	navigateTo: "LessonVideo",
@@ -399,7 +654,7 @@ export const lessons: CardProps[] = [
 		id: `lesson0`,
 		paramList: {
 			id: `lesson0`,
-			videoSource: "https://www.youtube.com/watch?v=QuZA24FEiIs&list=PLlJl1BR90sNE13WvpMX6oGjXzsZ90GKEM&index=8",
+			videoSource: "https://www.youtube.com/watch?v=5KoOAng2-kg&list=RDKDThNBO0vgw&index=2",
 		},
 		avata: {
 			uri: "https://www.icantech.vn/_next/image?url=https%3A%2F%2Fs3.icankid.io%2Ficantech%2Fcms%2F3_3x_960b0d2454.png&w=1920&q=100",
@@ -411,7 +666,7 @@ export const lessons: CardProps[] = [
 		id: `lesson1`,
 		paramList: {
 			id: `lesson1`,
-			videoSource: "https://www.youtube.com/watch?v=6Sszrx9GAnE&t=50s",
+			videoSource: "KDThNBO0vgw",
 		},
 		avata: {
 			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
@@ -489,6 +744,42 @@ export const lessons: CardProps[] = [
 			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
 		},
 	},
+	{
+		...lessonsEmpty,
+		title: "Bài 8: Vẽ hình nhân vật",
+		id: `lesson7`,
+		paramList: {
+			id: `lesson7`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 9: Tạo âm thanh",
+		id: `lesson8`,
+		paramList: {
+			id: `lesson8`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
+	{
+		...lessonsEmpty,
+		title: "Bài 10: Lệnh hội thoại",
+		id: `lesson9`,
+		paramList: {
+			id: `lesson9`,
+			videoSource: "KDThNBO0vgw",
+		},
+		avata: {
+			uri: "https://resources.mindx.edu.vn/uploads/images/ngon-ngu-lap-trinh-scratch-1687508459980-7347.jpg",
+		},
+	},
 ];
 
 const quizEmty: CardProps = {
@@ -502,7 +793,7 @@ const quizEmty: CardProps = {
 export const quizz = [
 	{
 		...quizEmty,
-		title: "Giới thiệu về Scratch",
+		title: "Câu hỏi ôn tập bài 1",
 		id: `quiz0`,
 		paramList: {
 			id: `quiz0`,
@@ -524,6 +815,42 @@ export const quizz = [
 		quizzes: quizzes2,
 		isComplete: false,
 	},
+	{
+		...quizEmty,
+		title: "Câu hỏi ôn tập bài 3",
+		id: `quiz2`,
+		paramList: {
+			id: `quiz2`,
+			order: 3,
+			quizzes: quizzes3,
+		},
+		quizzes: quizzes3,
+		isComplete: false,
+	},
+	{
+		...quizEmty,
+		title: "Câu hỏi ôn tập bài 4",
+		id: `quiz3`,
+		paramList: {
+			id: `quiz3`,
+			order: 4,
+			quizzes: quizzes4,
+		},
+		quizzes: quizzes4,
+		isComplete: false,
+	},
+	{
+		...quizEmty,
+		title: "Câu hỏi ôn tập bài 5",
+		id: `quiz4`,
+		paramList: {
+			id: `quiz4`,
+			order: 5,
+			quizzes: quizzes5,
+		},
+		quizzes: quizzes5,
+		isComplete: false,
+	},
 ];
 
 const gamesEmty: CardProps = {
@@ -541,18 +868,62 @@ export const games = [
 			id: 0,
 		},
 		avata: {
-			uri: "https://images.unsplash.com/photo-1682687221363-72518513620e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80",
+			uri: "https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/151244/Originals/scratch-project-07.jpg",
 		},
 	},
 	{
 		...gamesEmty,
-		id: `game${0}`,
+		id: `game${1}`,
 		title: "Game 2",
 		paramList: {
 			id: 1,
 		},
 		avata: {
-			uri: "https://images.unsplash.com/photo-1695764062673-ca63e7a6f4ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+			uri: "https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/151244/Originals/scratch-project-09.jpg",
+		},
+	},
+	{
+		...gamesEmty,
+		id: `game${2}`,
+		title: "Game 3",
+		paramList: {
+			id: 2,
+		},
+		avata: {
+			uri: "https://www.icantech.vn/_next/image?url=https%3A%2F%2Fs3.icankid.io%2Ficantech%2Fcms%2F3_3x_960b0d2454.png&w=1920&q=100",
+		},
+	},
+	{
+		...gamesEmty,
+		id: `game${3}`,
+		title: "Game 4",
+		paramList: {
+			id: 3,
+		},
+		avata: {
+			uri: "https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/151244/Originals/scratch-project-08.jpg",
+		},
+	},
+	{
+		...gamesEmty,
+		id: `game${4}`,
+		title: "Game 5",
+		paramList: {
+			id: 4,
+		},
+		avata: {
+			uri: "https://i1-vnexpress.vnecdn.net/2022/12/15/Anh-chup-Man-hinh-2022-12-15-l-8410-3292-1671095068.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=iBJK7FsmARD0t9t_U4WVug",
+		},
+	},
+	{
+		...gamesEmty,
+		id: `game${5}`,
+		title: "Game 6",
+		paramList: {
+			id: 5,
+		},
+		avata: {
+			uri: "https://ict-imgs.vgcloud.vn/2020/11/06/15/tre-em-tieu-hoc-co-the-hoc-ngon-ngu-lap-trinh-nao.PNG",
 		},
 	},
 ];
