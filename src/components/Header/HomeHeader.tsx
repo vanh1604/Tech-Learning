@@ -9,7 +9,7 @@ export interface HomeHeaderProps {
 
 const HomeHeader = (props: HomeHeaderProps) => {
   return (
-    <Column bgColor={colors.blurBackground} mb={4} pt={16} pb={4}>
+    <Column bgColor={colors.blurBackground} mb={4} safeAreaTop pb={4}>
       <Center>
         <Heading
           color={"#fff"}
